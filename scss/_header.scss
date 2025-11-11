@@ -1,4 +1,4 @@
-// @use 'variables';
+@use './variables' as *;
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -7,10 +7,24 @@
   &__logo {
     width: 100px;
   }
-  .main-nav__items {
+  &__items {
+    display: flex;
     ul {
       li {
+        padding: 1rem 1.5rem;
         a {
+          text-decoration: none;
+          color: #fff;
+          text-transform: uppercase;
+          border-bottom: 3px transparent solid;
+          padding-bottom: .5rem;
+          transition: border-color .5s;
+          &:hover{
+            border-color:$medium-color;
+          }
+          &.active{
+            border-color: $primary-color;
+          }
         }
       }
     }
@@ -19,7 +33,7 @@
 
 #header {
   &__home {
-    background: url("../img/bg.jpeg") no-repeat center right/cover;
+    background: $bg-image no-repeat center right/cover;
     height: 100vh;
     color: #fff;
     .container {
