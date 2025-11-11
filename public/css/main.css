@@ -67,6 +67,28 @@ input[class^=btn-]:hover {
   margin: 4rem 0;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.border-bottom {
+  height: 3px;
+  width: 3rem;
+  background-color: #EF6D6D;
+  margin: 1rem auto;
+}
+
+.lead {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  word-spacing: 2px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -136,6 +158,39 @@ img {
 }
 #header__home .header-content .typewrite {
   display: block;
+  margin: 4rem 0 1rem 0;
+}
+#home__a .container .skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+#home__a .container .skills i {
+  color: #EF6D6D;
+}
+#home__b .achievements {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  align-items: center;
+  color: #333;
+}
+#home__b .achievements li.title {
+  font-size: 1.5rem;
+}
+#home__b .achievements li.number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+#home__b .achievements div {
+  padding: 3rem 0;
+}
+#home__b .achievements div:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+#home__b .achievements div:nth-child(even) {
+  background-color: #ccc;
 }
 
 /*# sourceMappingURL=main.css.map */

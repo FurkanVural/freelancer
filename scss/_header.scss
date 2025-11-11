@@ -9,7 +9,7 @@
   }
   &__items {
     display: flex;
-    ul {
+    
       li {
         padding: 1rem 1.5rem;
         a {
@@ -27,7 +27,7 @@
           }
         }
       }
-    }
+    
   }
 }
 
@@ -47,6 +47,7 @@
       }
       .typewrite {
         display: block;
+        margin: 4rem 0 1rem 0;
       }
       a {
       }
