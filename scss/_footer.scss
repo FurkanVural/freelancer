@@ -1,0 +1,39 @@
+@use './variables' as *;
+#footer{
+    background-color: $dark-color;
+    .container{
+
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: space-between;
+        align-items: center;
+        height: 4rem;
+        color: #fff;
+        .socials{
+            ul{
+                display: flex;
+                flex-direction: row;
+                right: 0;
+                justify-content: flex-end;
+                
+                li{ 
+                    
+                    a{
+                        color: #fff;
+                        border-radius: 50%;
+                        border: 2px solid #fff;
+                        padding: 0.3rem 0.4rem;
+                        margin: 0 0.5rem;
+                        transition: all 0.5s;
+                        text-align: center;
+                        &:hover{
+                            background-color: #fff;
+                            color: $dark-color;
+                            // border: 2px solid $dark-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

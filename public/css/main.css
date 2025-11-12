@@ -95,6 +95,10 @@ input[class^=btn-]:hover {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: #fff;
   font-family: "Prompt", sans-serif;
@@ -191,6 +195,73 @@ img {
 }
 #home__b .achievements div:nth-child(even) {
   background-color: #ccc;
+}
+#home__c .container .steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+#home__c .container .steps .process-icon {
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: all 0.5s;
+}
+#home__c .container .steps .process-icon:hover {
+  background-color: #EF6D6D;
+}
+#home__c .container .steps .process-icon:hover .process-step {
+  background-color: #333;
+}
+#home__c .container .steps .process-step {
+  position: absolute;
+  font-size: 1rem;
+  background-color: #EF6D6D;
+  border-radius: 100%;
+  padding: 0.5rem;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  padding: 0.72rem 0.8rem;
+}
+
+#footer {
+  background-color: #333;
+}
+#footer .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  color: #fff;
+}
+#footer .container .socials ul {
+  display: flex;
+  flex-direction: row;
+  right: 0;
+  justify-content: flex-end;
+}
+#footer .container .socials ul li a {
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  padding: 0.3rem 0.4rem;
+  margin: 0 0.5rem;
+  transition: all 0.5s;
+  text-align: center;
+}
+#footer .container .socials ul li a:hover {
+  background-color: #fff;
+  color: #333;
 }
 
 /*# sourceMappingURL=main.css.map */
