@@ -53,4 +53,13 @@
       }
     }
   }
+  &__about{
+    background: $bg-image no-repeat top right/cover;
+    height: 14vh;
+    color: #fff;
+    border-bottom: 2px solid $primary-color;
+    .main-nav__items{
+      margin-top: 1rem;
+    }
+  }
 }
