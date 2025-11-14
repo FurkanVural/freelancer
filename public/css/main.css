@@ -280,6 +280,17 @@ img {
   transition: width 0.5s ease; /* dolarken animasyon */
   border-radius: 4px;
 }
+#about__c .brands {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 3rem;
+}
+#about__c .references {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 
 #footer {
   background-color: #333;
