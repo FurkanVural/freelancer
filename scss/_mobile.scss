@@ -1,0 +1,122 @@
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .main-nav {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &__logo {
+      width: 50px;
+      
+    }
+    &__items {
+        align-items: center;
+    }
+  }
+
+  #header {
+    &__home {
+      height: 60vh;
+}
+    #home{
+        &__a{
+            .container{
+                .skills{
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+        &__b{
+            .achievements{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        &__c{
+            .container{
+                .steps{
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+    }
+
+    &__about{
+        height: 16vh;
+    }
+}
+
+}
+@media (max-width: 576px) {
+
+    html {
+    font-size: 12px;
+  }
+  .main-nav {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &__logo {
+      width: 50px;
+      
+    }
+    &__items {
+        align-items: center;
+    }
+  }
+
+  #header {
+    &__home {
+      height: 44vh;
+      .header-content{
+        padding-top: 3rem;
+        h1{
+            font-size: 3rem;
+        }
+      }
+}}
+    #home{
+        &__a{
+            .container{
+                .skills{
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+        &__b{
+            .achievements{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        &__c{
+            .container{
+                .steps{
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+    }
+    #about{
+        &__a{
+            .container{
+                .content{
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+        &__c{
+            .brands{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+    #projects{
+        &__a{
+            .container{
+                .cards{
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+    }
+}

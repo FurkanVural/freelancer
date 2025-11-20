@@ -159,11 +159,11 @@ img {
 }
 #header__home .header-content h1 {
   font-size: 4rem;
-  line-height: 1.2rem;
+  line-height: 3.7rem;
 }
 #header__home .header-content .typewrite {
   display: block;
-  margin: 4rem 0 1rem 0;
+  margin: 1rem 0 1rem 0;
 }
 #header__about {
   background: url("../img/bg.jpeg") no-repeat top right/cover;
@@ -348,39 +348,39 @@ img {
   position: relative;
   overflow: hidden;
 }
-#projects__a .container .cards .card::before {
+#projects__a .container .cards .card .card__arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 180%;
+  height: 180%;
+  transform-origin: top right;
+  transform: translate(-48%, 23%) rotate(0deg);
+  transition: transform 0.4s ease;
+}
+#projects__a .container .cards .card .card__arrow i {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.5rem;
+  background-color: #333;
+  border-radius: 50%;
+  color: #fff;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+#projects__a .container .cards .card .card__arrow::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(120deg, rgba(226, 25, 25, 0.9), rgba(161, 6, 6, 0.2));
-  transform: translateX(-100%) rotate(45deg);
-  transition: transform 0.4s ease; /* Kayma animasyonu */
+  transform-origin: top right;
+  transform: translate(2%, 4.2%) rotate(45deg);
 }
-#projects__a .container .cards .card:hover::before {
-  transform: translateX(0);
+#projects__a .container .cards .card .card__arrow:hover {
+  transform: translate(-3%, -2%) rotate(-45deg);
 }
-#projects__a .container .cards .card::after {
-  content: "\f061";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  position: absolute;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: #e21919;
-  left: 0.75rem;
-  top: 53%;
-  transform: translate(0%, -50%) rotate(0);
-  opacity: 0.5;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-#projects__a .container .cards .card:hover::after {
-  transform: translate(0, -50%) rotate(0deg);
+#projects__a .container .cards .card .card__arrow:hover i {
   opacity: 1;
 }
 
@@ -417,6 +417,81 @@ img {
   grid-template-columns: repeat(3, 1fr);
   height: 13vh;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .main-nav {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-nav__logo {
+    width: 50px;
+  }
+  .main-nav__items {
+    align-items: center;
+  }
+  #header__home {
+    height: 60vh;
+  }
+  #header #home__a .container .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #header #home__b .achievements {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #header #home__c .container .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #header__about {
+    height: 16vh;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+  .main-nav {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-nav__logo {
+    width: 50px;
+  }
+  .main-nav__items {
+    align-items: center;
+  }
+  #header__home {
+    height: 44vh;
+  }
+  #header__home .header-content {
+    padding-top: 3rem;
+  }
+  #header__home .header-content h1 {
+    font-size: 3rem;
+  }
+  #home__a .container .skills {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #home__b .achievements {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #home__c .container .steps {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #about__a .container .content {
+    grid-template-columns: 1fr;
+  }
+  #about__c .brands {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #projects__a .container .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
