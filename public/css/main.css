@@ -386,8 +386,26 @@ img {
 
 #contact__a .contact-form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "fname email" "subject phone-number" "message-textarea message-textarea" "form-btn form-btn";
   gap: 1rem;
+}
+#contact__a .contact-form .fname {
+  grid-area: fname;
+}
+#contact__a .contact-form .email {
+  grid-area: email;
+}
+#contact__a .contact-form .subject {
+  grid-area: subject;
+}
+#contact__a .contact-form .phone-number {
+  grid-area: phone-number;
+}
+#contact__a .contact-form .message {
+  grid-area: message-textarea;
+}
+#contact__a .contact-form .form-btn {
+  grid-area: form-btn;
 }
 #contact__a .contact-form div input {
   width: 100%;
@@ -395,18 +413,12 @@ img {
   padding: 0.5rem;
   border-radius: 3px;
 }
-#contact__a .contact-form .message {
-  grid-column: 1/span 2;
-}
 #contact__a .contact-form .message .message-textarea {
   width: 100%;
   height: 18.75rem;
   border: 0.1px dashed;
   padding: 0.5rem;
   border-radius: 3px;
-}
-#contact__a .contact-form .form-btn {
-  grid-column: 1/span 2;
 }
 #contact__b {
   background-color: #EF6D6D;
@@ -449,6 +461,9 @@ img {
   #header__about {
     height: 16vh;
   }
+  #projects__a .container .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 576px) {
   html {
@@ -466,7 +481,7 @@ img {
     align-items: center;
   }
   #header__home {
-    height: 44vh;
+    height: 30vh;
   }
   #header__home .header-content {
     padding-top: 3rem;
@@ -477,20 +492,58 @@ img {
   #home__a .container .skills {
     grid-template-columns: repeat(1, 1fr);
   }
+  #home__a .container .skills div {
+    border-bottom: 4px solid #ccc;
+    padding-bottom: 1rem;
+  }
+  #home__a .container .skills div:last-child {
+    border: none;
+  }
   #home__b .achievements {
     grid-template-columns: repeat(1, 1fr);
   }
   #home__c .container .steps {
     grid-template-columns: repeat(1, 1fr);
   }
-  #about__a .container .content {
+  #home__c .container .steps div {
+    border-bottom: 4px solid #ccc;
+    padding-bottom: 1rem;
+  }
+  #home__c .container .steps div:last-child {
+    border: none;
+  }
+  #home #about__a .container .content {
     grid-template-columns: 1fr;
   }
-  #about__c .brands {
+  #home #about__c .brands {
     grid-template-columns: repeat(2, 1fr);
   }
-  #projects__a .container .cards {
+  #home #projects__a .container .cards {
     grid-template-columns: repeat(1, 1fr);
+  }
+  #home #projects__a .container .cards .card .card__arrow {
+    transform: translate(-48%, 23%) rotate(0deg);
+  }
+  #home #projects__a .container .cards .card .card__arrow::before {
+    content: "";
+    transform: translate(2%, 2.6%) rotate(45deg);
+  }
+  #home #projects__a .container .cards .card .card__arrow:hover {
+    transform: translate(-3%, -2%) rotate(-45deg);
+  }
+  #home #projects__a .container .cards .card .card__arrow:hover i {
+    opacity: 1;
+  }
+  #home #contact__a .contact-form {
+    grid-template-areas: "fname" "email" "subject" "phone-number" "message-textarea" "form-btn";
+  }
+  #home #contact__b .container {
+    grid-template-columns: 1fr;
+    height: 19vh;
+  }
+  #home #contact__b .container .contact-inf {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f4f4f4;
   }
 }
 

@@ -1,3 +1,4 @@
+@use "./variables" as *;
 @media (max-width: 768px) {
   html {
     font-size: 14px;
@@ -8,48 +9,54 @@
     align-items: center;
     &__logo {
       width: 50px;
-      
     }
     &__items {
-        align-items: center;
+      align-items: center;
     }
   }
 
   #header {
     &__home {
       height: 60vh;
-}
-    #home{
-        &__a{
-            .container{
-                .skills{
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
+    }
+    #home {
+      &__a {
+        .container {
+          .skills {
+            grid-template-columns: repeat(2, 1fr);
+          }
         }
-        &__b{
-            .achievements{
-                grid-template-columns: repeat(2, 1fr);
-            }
+      }
+      &__b {
+        .achievements {
+          grid-template-columns: repeat(2, 1fr);
         }
-        &__c{
-            .container{
-                .steps{
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
+      }
+      &__c {
+        .container {
+          .steps {
+            grid-template-columns: repeat(2, 1fr);
+          }
         }
+      }
     }
 
-    &__about{
-        height: 16vh;
+    &__about {
+      height: 16vh;
     }
-}
-
+  }
+  #projects {
+    &__a {
+      .container {
+        .cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
 }
 @media (max-width: 576px) {
-
-    html {
+  html {
     font-size: 12px;
   }
   .main-nav {
@@ -58,65 +65,129 @@
     align-items: center;
     &__logo {
       width: 50px;
-      
     }
     &__items {
-        align-items: center;
+      align-items: center;
     }
   }
 
   #header {
     &__home {
-      height: 44vh;
-      .header-content{
+      height: 30vh;
+      .header-content {
         padding-top: 3rem;
-        h1{
-            font-size: 3rem;
+        h1 {
+          font-size: 3rem;
         }
       }
-}}
-    #home{
-        &__a{
-            .container{
-                .skills{
-                    grid-template-columns: repeat(1, 1fr);
-                }
+    }
+  }
+  #home {
+    &__a {
+      .container {
+        .skills {
+          grid-template-columns: repeat(1, 1fr);
+          div{
+            border-bottom: 4px solid $medium-color;
+            padding-bottom: 1rem;
+            &:last-child{
+                border: none;
+            }
+          }
+        }
+      }
+    }
+    &__b {
+      .achievements {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    &__c {
+      .container {
+        .steps {
+          grid-template-columns: repeat(1, 1fr);
+          div{
+            border-bottom: 4px solid $medium-color;
+            padding-bottom: 1rem;
+            &:last-child{
+                border: none;
             }
         }
-        &__b{
-            .achievements{
-                grid-template-columns: repeat(1, 1fr);
-            }
+      }
+    }
+  }
+  #about {
+    &__a {
+      .container {
+        .content {
+          grid-template-columns: 1fr;
         }
-        &__c{
-            .container{
-                .steps{
-                    grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    &__c {
+      .brands {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+  #projects {
+    &__a {
+      .container {
+        .cards {
+          grid-template-columns: repeat(1, 1fr);
+          .card {
+            .card__arrow {
+              transform: translate(-48%, 23%) rotate(0deg); // dışarıda başlasın
+
+              // OK
+              i {
+              }
+
+              // LIGHT-BOX
+              &::before {
+                content: "";
+                transform: translate(2%, 2.6%) rotate(45deg);
+              }
+
+              // HOVER → SAĞ ÜST KÖŞEYE OTUR
+              &:hover {
+                transform: translate(-3%, -2%) rotate(-45deg); // köşeye tam oturur
+              }
+
+              &:hover i {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #contact {
+    &__a {
+      .contact-form {
+        grid-template-areas:
+          "fname"
+          "email"
+          "subject"
+          "phone-number"
+          "message-textarea"
+          "form-btn";
+      }
+    }
+    &__b{
+        .container{
+            grid-template-columns: 1fr;
+            height: 19vh;
+            .contact-inf{
+                margin-bottom: 1.5rem;
+                border-bottom: 2px solid $light-color;
+                &:last-child{
+                    // border-bottom: none;
                 }
             }
         }
     }
-    #about{
-        &__a{
-            .container{
-                .content{
-                    grid-template-columns: 1fr;
-                }
-            }
-        }
-        &__c{
-            .brands{
-                grid-template-columns: repeat(2,1fr);
-            }
-        }
-    }
-    #projects{
-        &__a{
-            .container{
-                .cards{
-                    grid-template-columns: repeat(1, 1fr);
-                }
-            }
-        }
-    }
+  }
+}
 }
