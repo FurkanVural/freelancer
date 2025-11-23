@@ -447,7 +447,7 @@ img {
     align-items: center;
   }
   #header__home {
-    height: 60vh;
+    height: 65vh;
   }
   #header #home__a .container .skills {
     grid-template-columns: repeat(2, 1fr);
@@ -481,7 +481,7 @@ img {
     align-items: center;
   }
   #header__home {
-    height: 30vh;
+    height: 40vh;
   }
   #header__home .header-content {
     padding-top: 3rem;
